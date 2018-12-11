@@ -1,5 +1,5 @@
 # Image Colorization with GANs 
-In this project, we tried to approach the image colorization problem by using a conditional generative adversarial network (CGAN) and a Wasserstein generative adversarial network (WGAN). The networks were trained on two public datasets: [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html). The colorized results of CGAN and WGAN are [shown here.](#Results-Comparison-between-CGAN-and-WGAN) For the result evaluation of CGAN, We achieved a 42% perceptual realism in the [turing test.](#Results-of-Perceptual-Realism) 
+In this project, we tried to approach the image colorization problem by using a conditional generative adversarial network (CGAN) and a Wasserstein generative adversarial network (WGAN). The networks were trained on two public datasets: [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html). The colorized results of CGAN and WGAN are [shown here](#Results-Comparison-between-CGAN-and-WGAN). For the result evaluation of CGAN, We achieved a 42% perceptual realism in the [turing test](#Results-of-Perceptual-Realism).
 
 ## Prerequisites
 - Python 3.6
