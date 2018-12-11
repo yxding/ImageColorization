@@ -94,6 +94,14 @@ The output of the discriminator is whether the image is real or fake. Real meani
   <img src='Images/dis.png' />
 </p>
 
+### Wasserstein GAN
+Wasserstein GAN does not use JSD to measure divergence, instead it uses something called the Earth-Mover (EM) distance. The EM distance basically calculates the minimal cost of transforming one probability distribution into the other. WGAN is proved to have easier hyperparameter searching, improved stability, less mode collapse and theoretical optimization guarantees. 
+
+For WGAN, we use the same architecture for the generator and discriminator as the previous conditional GAN and modify the network by changing:
+(1) After every gradient update on the critic function, clamp the weights to a small fixed range. 
+(2) Use a new loss function derived from the Wasserstein distance, no logarithm anymore. 
+(3) Switch the optimizer from Adam to RMSProp optimizer on the critic.
+
 ## Results Comparison between CGAN and WGAN
 Figure below shows several colorized results of CGAN and WGAN. It is illustrated that WGAN can improve the results in some
 cases, although the improvement is not very significant.
