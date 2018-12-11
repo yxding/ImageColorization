@@ -65,6 +65,7 @@ to
 ```
 cd Colorizing-with-WGANs
 ```
+and execute what has been done above
 
 ### Evaluate and Sample
 - To evaluate the model and sample colorized outputs on the test-set, we first plot the loss and accuracy per epoch and choose the checkpoint which records the best model in the `checkpoints` folder. Then copy that checkpoint to the `test` folder in `checkpoints`.
