@@ -14,7 +14,6 @@ In this project, we tried to approach the image colorization problem by using a 
 Clone this repo:
 ```bash
 https://github.com/yxding/ImageColorization.git
-cd Colorizing-with-GANs
 ```
 
 ### Dataset
@@ -24,8 +23,9 @@ cd Colorizing-with-GANs
   After downloading the data, put them under the `datasets` folder.
 
 ### Training
-- To train the model on dogs dataset with tuned hyperparameters:
+- To train the model on dogs dataset with tuned hyperparameters using CGAN:
 ```
+cd Colorizing-with-CGANs
 python train.py \
   --seed 100 \
   --dataset dogs \
@@ -40,8 +40,9 @@ python train.py \
   
 ```
 
-- To train the model of flowers dataset with tuned hyperparameters:
+- To train the model on flowers dataset with tuned hyperparameters:
 ```
+cd Colorizing-with-CGANs
 python train.py \
   --seed 100 \
   --dataset flowers \
@@ -54,6 +55,15 @@ python train.py \
   --lr-decay-steps 1e4 \
   --augment True
   
+```
+
+- To train the model on datasets with WGAN, just replace
+```
+cd Colorizing-with-CGANs
+```
+to
+```
+cd Colorizing-with-WGANs
 ```
 
 ### Evaluate and Sample
