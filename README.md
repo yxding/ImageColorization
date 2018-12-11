@@ -114,6 +114,7 @@ Based on the feedback from 50 participants, it turns out that we can fool them b
 <p align='center'>  
   <img src='Images/compare_picture.png' />
 </p>
+
 ## Authors
 
 * **Yuxin Ding** 
