@@ -107,10 +107,11 @@ For discriminator, we use similar architecture as the baselines contractive path
   <img src='img/discriminator.png' width='450px' height='168px' />
 </p>
   
-## Places365 Results
-Colorization results with Places365. (a) Grayscale. (b) Original Image. (c) Colorized with GAN.
+## Results Comparison between CGAN and WGAN
+Figure below shows several colorized results of CGAN and WGAN. It is illustrated that WGAN can improve the results in some
+cases, although the improvement is not very significant.
 <p align='center'>  
-  <img src='img/places365.jpg' />
+  <img src='images/places365.jpg' />
 </p>
 
 ## Authors
