@@ -111,7 +111,7 @@ For discriminator, we use similar architecture as the baselines contractive path
 Figure below shows several colorized results of CGAN and WGAN. It is illustrated that WGAN can improve the results in some
 cases, although the improvement is not very significant.
 <p align='center'>  
-  <img src='images/places365.jpg' />
+  <img src='Images/compare.png' />
 </p>
 
 ## Authors
