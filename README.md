@@ -114,6 +114,11 @@ cases, although the improvement is not very significant.
   <img src='Images/wgan_compare.png' />
 </p>
 
+## Results of Perceptual Realism
+Based on the feedback from 50 participants, it turns out that we can fool them by about 42%! Here are some examples from our survey and the number on the left of each picture shows the percentage of participants that recognized colorized image as the true one. The far left column shows example pairs that fool the participants most.
+<p align='center'>  
+  <img src='Images/compare_picture.png' />
+</p>
 ## Authors
 
 * **Yuxin Ding** 
