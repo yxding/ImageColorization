@@ -1,81 +1,65 @@
-# Image Colorization with Generative Adversarial Networks 
-In this work, we generalize the colorization procedure using a conditional Deep Convolutional Generative Adversarial Network (DCGAN) as as suggested by [Pix2Pix]. The network is trained on the datasets [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [Places365](http://places2.csail.mit.edu). Some of the results from Places365 dataset are [shown here.](#places365-results)
+# Image Colorization with GANs 
+In this project, we tried to approach the image colorization problem by using a conditional generative adversarial network (CGAN) and a Wasserstein generative adversarial network (WGAN). The networks were trained on two public datasets: [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html). The colorized results of CGAN and WGAN are [shown here.](#places365-results) For the result evaluation of CGAN, We achieved a 42% perceptual realism in the [turing test.] 
 
 ## Prerequisites
 - Linux
 - Tensorflow 1.7
-- NVIDIA GPU (12G or 24G memory) + CUDA cuDNN
+- Python 3.6
+- NVIDIA GPU (V100, 200G memory) + CUDA cuDNN
 
 ## Getting Started
 ### Installation
-- Clone this repo:
+Clone this repo:
 ```bash
-git clone https://github.com/ImagingLab/Colorizing-with-GANs.git
+https://github.com/yxding/ImageColorization.git
 cd Colorizing-with-GANs
-```
-- Install Tensorflow and dependencies from https://www.tensorflow.org/install/
-- Install python requirements:
-```bash
-pip install -r requirements.txt
 ```
 
 ### Dataset
-- We use [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [Places365](http://places2.csail.mit.edu) datasets. To train a model on the full dataset, download datasets from official websites.
-After downloading, put then under the `datasets` folder.
+- [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+- [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html).
+  
+  After downloading the data, put them under the `datasets` folder.
 
 ### Training
-- To train the model, run `main.py` script
-```bash
-python main.py
-```
-- To train the model on places365 dataset with tuned hyperparameters:
+- To train the model on dogs dataset with tuned hyperparameters:
 ```
 python train.py \
   --seed 100 \
-  --dataset places365 \
-  --dataset-path ./dataset/places365 \
+  --dataset dogs \
+  --dataset-path ./dataset/dogs \
   --checkpoints-path ./checkpoints \
-  --batch-size 16 \
-  --epochs 10 \
-  --lr 3e-4 \
-  --label-smoothing 1
-  
-```
-
-- To train the model of cifar10 dataset with tuned hyperparameters:
-```
-python train.py \
-  --seed 100 \
-  --dataset cifar10 \
-  --dataset-path ./dataset/cifar10 \
-  --checkpoints-path ./checkpoints \
-  --batch-size 128 \
+  --batch-size 32 \
   --epochs 200 \
+  --log True \
   --lr 3e-4 \
   --lr-decay-steps 1e4 \
   --augment True
   
 ```
 
-### Evaluate
-- Download the pre-trained weights [from here.](https://drive.google.com/open?id=1jTsAUAKrMiHO2gn7s-fFZ_zUSzgKoPyp) and copy them in the `checkpoints` folder.
-- To evaluate the model quantitatively on the test-set, run `test-eval.py` script:
+- To train the model of flowers dataset with tuned hyperparameters:
+```
+python train.py \
+  --seed 100 \
+  --dataset flowers \
+  --dataset-path ./dataset/flowers \
+  --checkpoints-path ./checkpoints \
+  --batch-size 32 \
+  --epochs 200 \
+  --log True \
+  --lr 3e-4 \
+  --lr-decay-steps 1e4 \
+  --augment True
+  
+```
+
+### Evaluate and Sample
+- To evaluate the model and sample colorized outputs on the test-set, we first plot the loss and accuracy per epoch and choose the checkpoint which records the best model in the `checkpoints` folder. Then copy that checkpoint to the `test` folder in `checkpoints`.
+- Run `test-eval.py` script:
 ```bash
 python test-eval.py
 ```
-
-### Turing Test
-- Download the pre-trained weights [from here.](https://drive.google.com/open?id=1jTsAUAKrMiHO2gn7s-fFZ_zUSzgKoPyp) and copy them in the `checkpoints` folder.
-- To evaluate the model qualitatively using visual Turing test, run `test-turing.py`:
-```bash
-python test-turing.py
-```
-
-- To apply time-based visual Turing test run (2 seconds decision time):
-```bash
-python test-turing.py --test-delay 2
-```
-
 
 ## Method
 
@@ -116,16 +100,8 @@ Colorization results with Places365. (a) Grayscale. (b) Original Image. (c) Colo
   <img src='img/places365.jpg' />
 </p>
 
-## Citation
-If you use this code for your research, please cite our paper <a href="https://arxiv.org/abs/1803.05400">Image Colorization with Generative Adversarial Networks</a>:
+## Authors
 
-```
-@inproceedings{nazeri2018image,
-  title={Image Colorization Using Generative Adversarial Networks},
-  author={Nazeri, Kamyar and Ng, Eric and Ebrahimi, Mehran},
-  booktitle={International Conference on Articulated Motion and Deformable Objects},
-  pages={85--94},
-  year={2018},
-  organization={Springer}
-}
-```
+* **Yuxin Ding** 
+* **Wen Xu** 
+
