@@ -2,10 +2,12 @@
 In this project, we tried to approach the image colorization problem by using a conditional generative adversarial network (CGAN) and a Wasserstein generative adversarial network (WGAN). The networks were trained on two public datasets: [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html). The colorized results of CGAN and WGAN are [shown here.](#places365-results) For the result evaluation of CGAN, We achieved a 42% perceptual realism in the [turing test.] 
 
 ## Prerequisites
+- Python 3.6
+- Google Computer Engine with NVIDIA GPU (V100, 200G memory)
 - Linux
 - Tensorflow 1.7
-- Python 3.6
-- NVIDIA GPU (V100, 200G memory) + CUDA cuDNN
+- CUDA 
+- CUDNN
 
 ## Getting Started
 ### Installation
