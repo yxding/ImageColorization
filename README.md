@@ -46,7 +46,7 @@ The discriminator is a 7 layer convolutional neural network. Each layer has a 4x
 The output of the discriminator is whether the image is real or fake. Real meaning it is the ground truth image and fake meaning it is the generated image. An illustration is shown below:
 
 <p align='center'>  
-  <img src='Images/dis.png' />
+  <img src='Images/dis.png' / width="500" height="390">
 </p>
 
 ### Wasserstein GAN
