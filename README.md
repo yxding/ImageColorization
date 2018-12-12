@@ -14,58 +14,20 @@ In this project, we tried to approach the image colorization problem by using a 
 Clone this repo:
 ```bash
 https://github.com/yxding/ImageColorization.git
+cd Colorizing-with-CGANs
 ```
 
 ### Dataset
 - [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 - [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html).
   
-  After downloading the data, put them under the `datasets` folder.
+  After downloading the data, put them under the `data` folder.
 
 ### Training
-- To train the model on dogs dataset with tuned hyperparameters using CGAN:
+- To train the model on dataset with tuned hyperparameters using CGAN:
 ```
-cd Colorizing-with-CGANs
-python train.py \
-  --seed 100 \
-  --dataset dogs \
-  --dataset-path ./dataset/dogs \
-  --checkpoints-path ./checkpoints \
-  --batch-size 32 \
-  --epochs 200 \
-  --log True \
-  --lr 3e-4 \
-  --lr-decay-steps 1e4 \
-  --augment True
-  
+python train.py 
 ```
-
-- To train the model on flowers dataset with tuned hyperparameters:
-```
-cd Colorizing-with-CGANs
-python train.py \
-  --seed 100 \
-  --dataset flowers \
-  --dataset-path ./dataset/flowers \
-  --checkpoints-path ./checkpoints \
-  --batch-size 32 \
-  --epochs 200 \
-  --log True \
-  --lr 3e-4 \
-  --lr-decay-steps 1e4 \
-  --augment True
-  
-```
-
-- To train the model on datasets with WGAN, just replace
-```
-cd Colorizing-with-CGANs
-```
-to
-```
-cd Colorizing-with-WGANs
-```
-and execute what has been done above
 
 ### Evaluate and Sample
 - To evaluate the model and sample colorized outputs on the test-set, we first plot the loss and accuracy per epoch and choose the checkpoint which records the best model in the `checkpoints` folder. Then copy that checkpoint to the `test` folder in `checkpoints`.
