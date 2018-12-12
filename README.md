@@ -14,7 +14,7 @@ In this project, we tried to approach the image colorization problem by using a 
 Clone this repo:
 ```bash
 https://github.com/yxding/ImageColorization.git
-cd Colorizing-with-CGANs
+cd ImageColorization
 ```
 
 ### Dataset
@@ -27,13 +27,6 @@ cd Colorizing-with-CGANs
 - To train the model on dataset with tuned hyperparameters using CGAN:
 ```
 python train.py 
-```
-
-### Evaluate and Sample
-- To evaluate the model and sample colorized outputs on the test-set, we first plot the loss and accuracy per epoch and choose the checkpoint which records the best model in the `checkpoints` folder. Then copy that checkpoint to the `test` folder in `checkpoints`.
-- Run `test-eval.py` script:
-```bash
-python test-eval.py
 ```
 
 ## Network Design
