@@ -19,7 +19,7 @@ cd Colorizing-with-CGANs
 
 ### Dataset
 - [Stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
-- [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html).
+- [VGG flower dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)
   
   After downloading the data, put them under the `data` folder.
 
