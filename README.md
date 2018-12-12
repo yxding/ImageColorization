@@ -11,7 +11,7 @@ In this project, we tried to approach the image colorization problem by using a 
 
 ## Getting Started
 ### Installation
-Clone this repo:
+Clone the repo:
 ```bash
 https://github.com/yxding/ImageColorization.git
 cd ImageColorization
@@ -24,7 +24,7 @@ cd ImageColorization
   After downloading the data, put them under the `data` folder.
 
 ### Training
-- To train the model on dataset with tuned hyperparameters using CGAN:
+- To train the model on dataset using CGAN:
 ```
 python train.py 
 ```
